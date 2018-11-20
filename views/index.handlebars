@@ -4,9 +4,9 @@
 
 <ul>
     {{#each burger}}
-        {{#unless devoured}}
+        {{#if devoured}}
             {{> burger/burger-block devoured=false}}
-        {{/unless}}
+        {{/if}}
     {{/each}}
 </ul>
 
