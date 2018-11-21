@@ -1,5 +1,5 @@
-$(function() {
-    $(".change-devoured").on("click", function(event) {
+$(function () {
+    $(".change-devoured").on("click", function (event) {
         var id = $(this).data("id");
         var newdevoured = $(this).data("newdevoured");
 
@@ -7,12 +7,16 @@ $(function() {
             devoured: newdevoured
         };
 
-        $.ajax("/api/burgers/" + id, {
+        console.log("id: ", id);
+        console.log("newdevoured: ", newdevoured);
+
+        // Send the PUT request.
+        $.ajax("api/burgers/" + id, {
             type: "PUT",
             data: newDevouredState
         }).then(
-            function() {
-                console.log("changed sleep to", newdevoured);
+            function () {
+                console.log("changed devoured to", newdevoured);
 
                 location.reload();
             }
