@@ -47,7 +47,6 @@ let orm = {
         var queryString = "INSERT INTO " + table;
 
         queryString += " (";
-        queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
         queryString += "VALUES (";
