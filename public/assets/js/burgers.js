@@ -4,7 +4,7 @@ $(function () {
         var newdevoured = $(this).data("newdevoured");
 
         var newDevouredState = {
-            devoured: newdevoured
+            devoured: !newdevoured
         };
 
         console.log("id: ", id);
